@@ -1,0 +1,37 @@
+FROM python:3.11-slim
+
+LABEL maintainer="##TODO: add your email here##"
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PIP_NO_CACHE_DIR=1
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        curl \
+        git \
+        libgl1 \
+        libglib2.0-0 \
+        wget \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN python -m pip install --upgrade pip setuptools wheel
+
+# DINOv3 requires Python >= 3.11. Keep this image separate from the
+# DFUDA/MMCV image, which is pinned to Python 3.8 and PyTorch 1.7.1.
+RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+RUN pip install \
+    ftfy \
+    iopath \
+    omegaconf \
+    pandas \
+    regex \
+    scikit-learn \
+    submitit \
+    termcolor \
+    torchmetrics
+
+WORKDIR /home/DFUDA
+
+CMD ["/bin/bash"]

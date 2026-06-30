@@ -1,0 +1,75 @@
+# --- Local-only (not for GitHub) ---
+Dual_Foundation_Models_for_Unsupervised_Domain_Adaptation.pdf
+README_MIC.md
+
+# --- Local datasets & downloads (large) ---
+/data/
+
+# --- Archives ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.tbz2
+*.7z
+*.rar
+
+# --- DINOv3 (clone separately; see README) ---
+dinov3/
+using_dino/
+
+# --- Pretrained / foundation-model weights ---
+pretrained/
+pretrained_model/
+
+# --- Generated artifacts ---
+prototypes/
+configs/generated/
+work_dirs/
+wandb/
+
+# --- CSV path lists (regenerate with utils/data_csv.py) ---
+utils/data_path/*.csv
+
+# --- Checkpoints & model files ---
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.onnx
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+.env
+.env.*
+!.env.example
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# --- Tools / caches ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- IDE / OS ---
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- Jupyter ---
+.ipynb_checkpoints/

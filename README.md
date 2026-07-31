@@ -344,7 +344,7 @@ python -m tools.test configs/generated/local-exp201/<config>.py \
   work_dirs/local-exp201/<run_name>/latest.pth --eval mIoU
 ```
 
-To evaluate using our pretrained checkpoint, download the checkpoint from [here] (https://drive.google.com/drive/folders/1L4uv0-T9Xer2Swzq5vDk65Tq2Hgzrh8g?usp=drive_link), place the corresponding generated config file in configs/generated and provide the downloaded checkpoint path as the second argument:
+To evaluate using our pretrained checkpoint, download the checkpoint from [here](https://drive.google.com/drive/folders/1L4uv0-T9Xer2Swzq5vDk65Tq2Hgzrh8g?usp=drive_link), place the corresponding generated config file in configs/generated and provide the downloaded checkpoint path as the second argument:
 
 ```shell
 python -m tools.test configs/generated/local-exp201/<config>.py \ <path_to_checkpoint>.pth --eval mIoU
